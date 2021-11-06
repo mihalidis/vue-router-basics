@@ -2,13 +2,34 @@
   <div class="container">
     <h3>User Start Component</h3>
     <hr>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium asperiores commodi, dicta doloribus earum
-      enim fugiat incidunt nemo, quisquam ratione sapiente sequi ullam, velit vitae voluptatem. A doloremque iste
-      veritatis.
-    </p>
+    <ul class="list-group">
+      <li v-for="item in userList" :key="item.id" class="list-group-item">{{ item.name }}</li>
+    </ul>
   </div>
 </template>
 <script>
-  export default {}
+  export default {
+    data() {
+      return {
+        userList: [
+          {
+            id: 1,
+            name: 'User 1'
+          },
+          {
+            id: 2,
+            name: 'User 2'
+          },
+          {
+            id: 3,
+            name: 'User 3'
+          },
+          {
+            id: 4,
+            name: 'User 4'
+          },
+        ]
+      }
+    }
+  }
 </script>

@@ -1,18 +1,17 @@
 <template>
   <div class="container">
-    <h3>User Component</h3>
-    <hr>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, earum libero odit optio repellendus sed
-      soluta? Animi, atque blanditiis commodi consequatur distinctio dolorem eaque eos expedita, modi reprehenderit
-      repudiandae soluta.
-    </p>
+    <router-view></router-view>
     <button class="btn btn-success" @click.prevent="goToHome">HomePage</button>
   </div>
 </template>
 <script>
   export default {
     name: 'User',
+    computed: {
+      id() {
+        return this.$route.params.id;
+      }
+    },
     methods: {
       goToHome() {
         this.$router.push({ name : 'homePage' });
