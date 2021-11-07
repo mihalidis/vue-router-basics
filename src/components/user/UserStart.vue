@@ -3,7 +3,14 @@
     <h3>User Start Component</h3>
     <hr>
     <ul class="list-group">
-      <li v-for="item in userList" :key="item.id" class="list-group-item">{{ item.name }}</li>
+      <router-link tag="li"
+                   v-for="item in userList"
+                   :key="item.id"
+                   class="list-group-item user-list"
+                   :to="{ name: 'UserDetailPage', params: { id: item.id } }"
+      >
+        {{ item.name }}
+      </router-link>
     </ul>
   </div>
 </template>
@@ -30,6 +37,14 @@
           },
         ]
       }
-    }
+    },
+    methods: {}
   }
 </script>
+
+<style>
+.user-list:hover {
+  cursor: pointer;
+  background-color: #CEE5D0;
+}
+</style>

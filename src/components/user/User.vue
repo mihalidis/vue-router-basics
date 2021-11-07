@@ -2,6 +2,7 @@
   <div class="container">
     <router-view></router-view>
     <button class="btn btn-success" @click.prevent="goToHome">HomePage</button>
+    <hr>
   </div>
 </template>
 <script>

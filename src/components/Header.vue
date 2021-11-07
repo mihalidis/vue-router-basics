@@ -8,8 +8,7 @@
   </router-link>
   <router-link tag="li"
                to="/user"
-               active-class="active"
-               exact>
+               active-class="active">
     <a>User</a>
   </router-link>
 </ul>
